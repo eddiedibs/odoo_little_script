@@ -30,7 +30,6 @@ class start_odoo:
         elif self.version < 15:
             self.python_version = '3.8'
 
-    @classmethod
     def start_odoo_server(self, version, python_version):
         start_odoo = subprocess.run(f'/opt/odoo{version}/venv-odoo{version}/bin/python{python_version} /opt/odoo{version}/odoo-bin -c /etc/odoo{version}.conf', stdout=subprocess.PIPE, shell=True)
 
